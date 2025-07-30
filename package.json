@@ -1,0 +1,9 @@
+{
+  "name": "leave-management-monorepo",
+  "private": true,
+  "scripts": {
+    "start:backend": "cd backend && npm install && npm start",
+    "start:frontend": "cd frontend && npm install && npm start",
+    "start": "npm run start:backend"
+  }
+}
