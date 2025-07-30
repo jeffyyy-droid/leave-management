@@ -1,5 +1,5 @@
 // backend/services/permissionService.js
-const AccessRole = require('../models/accessRole');
+const AccessRole = require('../models/AccessRole');
 
 let permissionsMap = {};
 
