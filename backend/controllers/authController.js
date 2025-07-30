@@ -58,9 +58,12 @@ exports.login = async (req, res) => {
     );
     console.log("Generated token:", token);
 
-    res.json({ token, user });
+    res.json({ token, user });    
+    console.log("User found:", user);
+    console.log("Generated token:", token);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: err.message });
   }
 };
+

@@ -12,13 +12,16 @@ export default function Login() {
     e.preventDefault();
     try {
       const { data } = await login({ email });
+      console.log("Login Response Data:", data); // <-- Debug log
       localStorage.setItem('token', data.token);
       localStorage.setItem('role',  data.user.role);
       navigate(data.user.role === 'admin' ? '/manager' : '/employee');
     } catch (err) {
+      console.error("Login Error:", err.response || err); // Debug log
       setError(err.response?.data?.message || 'Login failed');
     }
   };
+
 
   return (
     <div className="login-page">
