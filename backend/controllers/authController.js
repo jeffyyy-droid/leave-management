@@ -39,11 +39,14 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const { email } = req.body;
+    console.log("Login attempt with email:", email);
     if (!email) {
       return res.status(400).json({ message: 'Email is required' });
     }
 
     const user = await User.findOne({ "Email": email });
+    console.log("User found:", user);
+
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
@@ -53,6 +56,7 @@ exports.login = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: '1d' }
     );
+    console.log("Generated token:", token);
 
     res.json({ token, user });
   } catch (err) {

@@ -9,22 +9,24 @@ export default function Login() {
   const navigate            = useNavigate();
 
   const handleSubmit = async e => {
-    e.preventDefault();
+  e.preventDefault();
     try {
       const { data } = await login({ email });
+      console.log("Login response:", data);  // <-- Add this
       localStorage.setItem('token', data.token);
       localStorage.setItem('role',  data.user.role);
 
-      // now check for 'admin'
       if (data.user.role === 'admin') {
         navigate('/manager');
       } else {
         navigate('/employee');
       }
     } catch (err) {
+      console.error("Login error:", err.response || err);
       setError(err.response?.data?.message || 'Login failed');
     }
   };
+
 
   return (
     <div className="login-container">
