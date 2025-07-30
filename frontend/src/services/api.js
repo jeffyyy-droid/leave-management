@@ -1,10 +1,9 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "https://your-backend.onrender.com/api",
+  baseURL: process.env.REACT_APP_API_URL, // No hardcoding
 });
 
-// Interceptor to attach token
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   console.log("📤 Attaching token to request:", token);
@@ -14,7 +13,7 @@ API.interceptors.request.use((config) => {
   return config;
 });
 
-// Export your API calls
+// API endpoints
 export const login = (data) => API.post("/auth/login", data);
 export const register = (data) => API.post("/auth/register", data);
 export const getLeaves = () => API.get("/leaves");
