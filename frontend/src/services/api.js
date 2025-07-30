@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "https://leave-management-1-rsnn.onrender.com",
+  baseURL: process.env.REACT_APP_API_URL || "https://leave-management-1-rsnn.onrender.com/api",
 });
 
 // Attach token
