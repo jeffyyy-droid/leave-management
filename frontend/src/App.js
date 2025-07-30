@@ -9,13 +9,14 @@ import {
 import Login             from "./components/Login";
 import EmployeeDashboard from "./components/EmployeeDashboard";
 import ManagerDashboard  from "./components/ManagerDashboard";
+import IndexPage         from "./components/Index";  // ← Add this import
 
 function App() {
   return (
     <Router>
       <Routes>
-        {/* Redirect root to /login */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        {/* Index page */}
+        <Route path="/" element={<IndexPage />} />
 
         {/* Login screen */}
         <Route path="/login" element={<Login />} />
@@ -25,11 +26,10 @@ function App() {
         <Route path="/manager"  element={<ManagerDashboard  />} />
 
         {/* Catch-all */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );
 }
 
-// ← Ensure this line is present:
 export default App;
