@@ -1,19 +1,21 @@
+// src/components/IndexPage.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./IndexPage.css";
 
 const IndexPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Welcome to Leave Management</h1>
-      <p>Click below to login</p>
-      <button 
-        onClick={() => navigate("/login")} 
-        style={{ padding: "10px 20px", fontSize: "16px", cursor: "pointer" }}
-      >
-        Go to Login
-      </button>
+    <div className="index-page">
+      <div className="index-content">
+        <img src="/geolah.png" alt="Geolah Logo" className="index-logo" />
+        <h1 className="index-title">Welcome to Leave Management</h1>
+        <br></br>
+        <button onClick={() => navigate("/login")} className="index-button">
+          Go to Login
+        </button>
+      </div>
     </div>
   );
 };

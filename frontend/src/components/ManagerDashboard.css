@@ -1,0 +1,214 @@
+.manager-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  padding: 120px 15px 40px;
+  box-sizing: border-box;
+}
+
+.manager-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.manager-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Summary Panel */
+.summary-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 8px;
+  background: #eaeaea;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.summary-item.active {
+  background: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.summary-item h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.summary-item p {
+  margin: 5px 0 0;
+  font-size: 20px;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-bar input[type="month"],
+.filter-bar input[type="text"] {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Export Buttons */
+.export-bar {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.export-bar button {
+  background: #000;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.export-bar button:hover {
+  background: #333;
+}
+
+/* Table */
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.leave-table th,
+.leave-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.leave-table th {
+  background: #000;
+  color: #fff;
+  font-weight: 500;
+}
+
+.leave-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.status.approved {
+  font-weight: 600;
+}
+
+.status.rejected {
+  font-weight: 600;
+}
+
+.status.pending {
+  font-weight: 600;
+}
+
+button.approve-btn,
+button.reject-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background 0.3s ease;
+}
+
+button.approve-btn {
+  background: #000;
+  color: #fff;
+}
+
+button.reject-btn {
+  background: #555;
+  color: #fff;
+}
+
+button.approve-btn:hover {
+  background: #333;
+}
+
+button.reject-btn:hover {
+  background: #222;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Calendar Section */
+.calendar-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.leave-calendar {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.rbc-calendar {
+  font-family: 'Roboto', sans-serif;
+}
+
+.rbc-event {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-size: 12px;
+}
+
+.rbc-toolbar button {
+  background: #000 !important;
+  color: #fff !important;
+  border-radius: 6px;
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+  background: #333 !important;
+}

@@ -1,22 +1,28 @@
 // src/components/Navbar.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 export default function Navbar() {
   const navigate = useNavigate();
 
-  const logout = () => {
+  const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
-    navigate("/login");  // ensure this matches your login route
+    navigate("/login");
   };
 
   return (
-    <nav style={{ padding: "10px", background: "#333", color: "#fff" }}>
-      <h3>Leave Management System</h3>
-      <button onClick={logout} style={{ float: "right", color: "#000" }}>
-        Logout
-      </button>
+    <nav className="navbar">
+      <div className="navbar-section left"></div> {/* Empty space for alignment */}
+      <div className="navbar-section center">
+        <img src="/geolah.png" alt="Geolah Logo" className="navbar-logo" />
+      </div>
+      <div className="navbar-section right">
+        <button className="logout-button" onClick={handleLogout}>
+          Logout
+        </button>
+      </div>
     </nav>
   );
 }

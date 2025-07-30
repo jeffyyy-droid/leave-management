@@ -1,0 +1,50 @@
+.navbar {
+  position: fixed;          
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.navbar-section {
+  flex: 1;                   /* Each section takes equal space */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-section.center {
+  justify-content: center;   /* Center the logo */
+}
+
+.navbar-section.right {
+  justify-content: flex-end; /* Align logout button to the right */
+}
+
+.navbar-logo {
+  width: 80px;
+  border-radius: 20px;
+  height: auto;
+}
+
+.logout-button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #333;
+  transform: scale(1.05);
+}
